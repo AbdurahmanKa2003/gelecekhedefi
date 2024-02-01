@@ -11,7 +11,7 @@ void setup() {
 }
 
 void loop() {
-  // Лунные светодиоды
+  
   for (int i = 0; i < 2; i++) {
     digitalWrite(moonPins[i], HIGH);
   }
@@ -20,7 +20,7 @@ void loop() {
     digitalWrite(moonPins[i], LOW);
   }
 
-  // Дневные светодиоды
+
   for (int i = 0; i < 2; i++) {
     digitalWrite(dayPins[i], HIGH);
   }
@@ -29,7 +29,7 @@ void loop() {
     digitalWrite(dayPins[i], LOW);
   }
 
-  // Годовые светодиоды
+  
   for (int i = 0; i < 2; i++) {
     digitalWrite(yearPins[i], HIGH);
   }
@@ -38,5 +38,5 @@ void loop() {
     digitalWrite(yearPins[i], LOW);
   }
 
-  delay(1000); // Пауза между миганиями
+  delay(1000);
 }
