@@ -1,6 +1,6 @@
-const int moonPins[] = {2, 3};  // Пины подключения лунных светодиодов
-const int dayPins[] = {4, 5};   // Пины подключения дневных светодиодов
-const int yearPins[] = {6, 7};  // Пины подключения годовых светодиодов
+const int moonPins[] = {2, 3};  
+const int dayPins[] = {4, 5};   
+const int yearPins[] = {6, 7};  
 
 void setup() {
   for (int i = 0; i < 2; i++) {
