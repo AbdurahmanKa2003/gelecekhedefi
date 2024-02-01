@@ -1,0 +1,20 @@
+const int ledPins[] = {2, 3, 4, 5, 6, 7, 8, 9}; // Пины подключения светодиодов
+long studentNumber = 30721109; // Ваш студенческий номер
+
+void setup() {
+  for (int i = 0; i < 8; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+
+void loop() {
+  for (int i = 7; i >= 0; i--) {
+    int digit = studentNumber % 10;
+    studentNumber /= 10;
+
+    digitalWrite(ledPins[i], HIGH);
+    delay(500); // Время горения светодиода
+    digitalWrite(ledPins[i], LOW);
+  }
+  delay(1000); // Пауза между миганиями
+}
