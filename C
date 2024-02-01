@@ -1,0 +1,42 @@
+const int moonPins[] = {2, 3};  // Пины подключения лунных светодиодов
+const int dayPins[] = {4, 5};   // Пины подключения дневных светодиодов
+const int yearPins[] = {6, 7};  // Пины подключения годовых светодиодов
+
+void setup() {
+  for (int i = 0; i < 2; i++) {
+    pinMode(moonPins[i], OUTPUT);
+    pinMode(dayPins[i], OUTPUT);
+    pinMode(yearPins[i], OUTPUT);
+  }
+}
+
+void loop() {
+  // Лунные светодиоды
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(moonPins[i], HIGH);
+  }
+  delay(500);
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(moonPins[i], LOW);
+  }
+
+  // Дневные светодиоды
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(dayPins[i], HIGH);
+  }
+  delay(500);
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(dayPins[i], LOW);
+  }
+
+  // Годовые светодиоды
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(yearPins[i], HIGH);
+  }
+  delay(500);
+  for (int i = 0; i < 2; i++) {
+    digitalWrite(yearPins[i], LOW);
+  }
+
+  delay(1000); // Пауза между миганиями
+}
